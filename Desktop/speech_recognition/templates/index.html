@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+    <title>Meeting Summerization Tool</title>
+    <!---<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">--->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/i1.css') }}" />
+  <style>
+.container { 
+  height: 200px;
+  position: relative;
+ 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+color: green;
+}
+.bottom{
+ margin: 0;
+  position:absolute;
+  top: 70%;
+  left: 40%;
+  
+}
+body {
+  background-image: url("static/1.jpg");
+   background-repeat: no-repeat;
+  background-size: 1400px 600px
+}
+img {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 3px;
+  width: 150px;
+}
+</style>
+</head>
+<body style="background:url(https://c4.wallpaperflare.com/wallpaper/617/363/732/wave-red-lines-light-wallpaper-thumb.jpg);background-size:100%;"></center></h1>
+    <h1><center> Recording</center></h1>
+   <div id="controls">
+   <div class="container">
+	<div class="center">
+     <button id="recordButton" onclick="document.getElementById('toggleImage').src='static/2.png'"><h3>Record</h3></button>
+     <button id="pauseButton" onclick="document.getElementById('toggleImage').src='static/3.png'"><h3>Pause</h3></button>
+     <button id="stopButton" onclick="document.getElementById('toggleImage').src='static/stop.png'"><h3>Stop</h3></button>
+	</div>
+	</div>
+	 <div id="controls">
+   <div class="container">
+	<div class="center">
+  <img src="static/stop.png" id="toggleImage"/>
+	</div>
+	</div>
+		
+   <div id="formats"><div class="center"><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br></div></div> 
+ <p><strong><center></center></strong></p>
+ <ol id="recordingsList"></ol>
+	<!----Transcription----->
+
+	
+<div id ="text">
+
+	<div class ="bottom">
+	<a href="{{ url_for('index2') }}">
+	<button><h3>Do you want to Convert Audio to Text(click here)</h3></button></a>
+ <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+	 </div>
+	 </div>
+  </body>	
+<!----Transcription End----->
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="/static/js/app.js"></script>
+</html>

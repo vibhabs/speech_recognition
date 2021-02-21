@@ -1,0 +1,37 @@
+h1, p, input {
+    font-family: 'Lato', sans-serif;
+	color:red;
+	size:30px;
+}
+
+#speechContainer {
+    margin: 20px;
+	color:red;
+	text-align:center;
+}
+
+#submitButton {
+    background-color: #019E;
+    color: white;
+    border-radius: 9px;
+    border:none;
+    padding: 10px 30px;
+    margin-top: 1px;
+    text-align:center;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+text-align:center;
+}
+
+#speechTranscriptContainer {
+    margin-top: 20px;
+text-align:center;
+}
+
+#speechText {
+    font-size: 18px;
+    width: 500px;
+text-align:center;
+}
